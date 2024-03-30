@@ -1,1 +1,36 @@
-Git Komutları Buraya gelecek...
+pwd ->mevcut klasörü gösterir.
+ls ->listeleme
+ls desktop ->desktop klasörünün içindeki dosyaları listeler
+ls . ->mevcut klasördeki dosylar
+ls .. ->bir üst klasördeki dosyları listeleri
+ls -a ->mevcut klasördeki bütün dosyarları listeler gizli dosyalar dahil
+start . ->dosya gezgininde mevcut konumu açar
+start a.txt ->txt dosyasını açar
+touch test.txt ->test.txt dosyasının olulturur.
+touch a/test.txt ->a klasöründe test.txt dosyasını oluştur.
+mkdir test->test klasörünü oluşturur.
+rm test ->test dosya siler.
+rmdir a->a boş klasörünü siler
+rm -r a ->a boş klasörünü siler
+rm -rf test->test boş olmayan klasörünü siler
+git init ->mevcut klasörde git repository oluşturur.
+rm -fr .git ->.git dosyasını siler 
+git status ->repository durumunu gösterir. her zaman kulllanılmalı. git reposu kkontrolu sağlar.
+git status komutunda untracked dosyları eklemek icin
+git add test.txt ->test.txt izlemeye alır.
+git add . ->mevcut konumu izlemeye alır. dosyalar stage bölgesine alınır.
+çalışma dizini->git add txt->txt dosyası stage bölgesine alınır->git commit ile Gitreoposuna aktarılır.
+git commit -m "commit başlığı yazılırı" ->commit işlemi yapıldı. dosyaları reopositorye mesaj başlığı ile kaydeder.
+git commit -am "" değişikilikler stage bölgesine alınmadan direkt repositorye eklenir.
+
+
+git add . stage bölgesine değişiklikler eklenir.
+git status kontrol edilir
+git resotre --staged test.txt -> test.txt stage bölgesinden çıkarılır.Bu durumda bu dosyada yapılan değişiklikler takip edilmeyecektir. geri dönüş yapılırsa bu değişiklikler görünmez.
+git restore --staged . -> stage bölgesindeki bütün dosyalar çıkarılır.
+git add .. ->mevcut konumun üst klasörünu takibe alır.
+
+
+git log -> reponun geçmiş commit kayıtları gösterilir.
+git log --online ->commitler kısaca listelenir.
+git commit --amend ->son commit mesajını değiştirmeye ve son değişikilkerin tamamını stage bölgesine taşır.
